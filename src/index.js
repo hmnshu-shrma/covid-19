@@ -1,15 +1,11 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import 'Styles/style.scss'
-import FormContainer from './views/'
+import LandingPageComponent from './views/landing'
 
 class App extends Component {
   render() {
-    return (
-      <React.Fragment>
-        <FormContainer />
-      </React.Fragment>
-    )
+    return <LandingPageComponent />
   }
 }
 

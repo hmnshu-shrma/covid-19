@@ -28,8 +28,8 @@ module.exports = () => {
       contentBase: rootDir,
       publicPath: '/',
       historyApiFallback: true,
-      hot: true,
-      open: true
+      hot: true
+      // open: true
       // needed for phone testing
       // host:'0.0.0.0',
       // port:'8080'
@@ -45,7 +45,7 @@ module.exports = () => {
         Hoc: path.resolve(__dirname, 'src/hoc/'),
         Routes: path.resolve(__dirname, 'src/routes/'),
         FormConstants: path.resolve(__dirname, 'src/FormConstants/'),
-        Util: path.resolve(__dirname, 'src/util/')
+        Utils: path.resolve(__dirname, 'src/utils/')
       }
     },
     module: {

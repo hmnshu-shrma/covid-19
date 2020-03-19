@@ -11,7 +11,8 @@
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "build": "npm run clean && webpack  --mode=production --progress --profile --colors --display-error-details"
   },
-  "keywords": ["react",
+  "keywords": [
+    "react",
     "reactjs",
     "babel6",
     "boilerplate",
@@ -21,7 +22,8 @@
     "hmr",
     "live",
     "edit",
-    "webpack"],
+    "webpack"
+  ],
   "author": "Himanshu Sharma <hmnshu26@gmail.com> (http://hmnshu.co)",
   "license": "ISC",
   "repository": {
@@ -29,7 +31,6 @@
     "url": "https://github.com/hmnshushrma/react-custom-boilerplate.git"
   },
   "bugs": "https://github.com/hmnshushrma/react-custom-boilerplate/issues",
-  "license": "ISC",
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/runtime": "^7.4.5",
@@ -79,9 +80,5 @@
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hmnshushrma/react-custom-boilerplate.git"
   }
 }
