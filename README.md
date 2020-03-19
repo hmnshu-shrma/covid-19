@@ -1,5 +1,2 @@
-# react-custom-boilerplate
-custom-react-boilerplate
-
-#addednewbuild configs
- 
+#covid-19just
+to help people
