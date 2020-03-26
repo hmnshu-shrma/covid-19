@@ -6,10 +6,12 @@ const CountryCards = props => {
     <ul className='cardlist'>
       <li className='country cards speciale'>
         <h5>{country.country || 'N/A'}</h5>
+        <p className='totalcases'>total cases : {country.cases || 'N/A'}</p>
         <p className='casestoday'>
           Today Cases : {country.todayCases || 'N/A'}
         </p>
         <p className='totaldeaths'>total Deaths : {country.deaths || 'N/A'}</p>
+
         <p className='todaydeaths'>
           today deaths : {country.todayDeaths || 'N/A'}
         </p>

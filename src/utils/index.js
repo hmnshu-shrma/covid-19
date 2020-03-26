@@ -34,6 +34,7 @@ export const getSingleCountry = async args => {
 }
 
 export const timeConverter = UNIXtimestamp => {
+  if (!UNIXtimestamp) return 'N/A'
   var dObj = new Date(UNIXtimestamp)
   var date = dObj.toLocaleString()
   return date

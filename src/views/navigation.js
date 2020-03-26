@@ -18,7 +18,6 @@ function countryToFlag(isoCode) {
 class Navigation extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = {
       tags: []
     }
@@ -32,9 +31,6 @@ class Navigation extends React.Component {
         tags: values
       },
       () => {
-        // This will output an array of objects
-        // given by Autocompelte options property.
-        console.log(this.state.tags)
         this.props.countryName(this.state.tags)
       }
     )
@@ -45,7 +41,11 @@ class Navigation extends React.Component {
       <header>
         <nav>
           <ul className='navigation hr-ul-li'>
-            <li className='logo'>COVID-19</li>
+            <li className='logo'>
+              <a href='https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen'>
+                <h1>COVID-19</h1>
+              </a>
+            </li>
             <li>
               <Autocomplete
                 onChange={this.onTagsChange}

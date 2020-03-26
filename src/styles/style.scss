@@ -7,10 +7,22 @@ body{
 }
 .cards{
   color: $white;
+  span{
+    margin:10px 15px 10px 0px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px) {
+      display: block;
+    }
+  }
 }
 h1,h2,h3,h4{
   font-weight: 400;
   text-transform: capitalize;
+  margin:0px;
+  padding:0px;
 }
 .center-warning {
   display: flex;
@@ -19,6 +31,12 @@ h1,h2,h3,h4{
   background-color: rgba(29,6,6,.6);
   align-items: left;
   padding: 15px;
+
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
+    display: block;
+  }
 }
 
 .heading{
@@ -33,11 +51,21 @@ h1,h2,h3,h4{
   font-size: 18px;
   display: block;
   margin: 0 auto;
+  background: #fff;
+  border: none;
+  border-radius: 0px;
+  padding: 10px;
 }
 
 .navigation{
   display: flex;
   justify-content: space-between;
+
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
+    display: block;
+  }
 }
 
 ul.hr-ul-li{
@@ -52,16 +80,29 @@ ul.hr-ul-li{
 }
 
 .logo {
-  font-size: 2em;
   padding: 10px 0px;
+  h1{
+    font-size: 2rem;
+  }
 }
 
 main {
   display: flex;
   justify-content: flex-start;
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
+    display: block;
+  }
+
   aside{
     width: 20%;
     background: #000;
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px) {
+      width: auto;
+    }
 
   }
   section{
@@ -69,7 +110,13 @@ main {
     width: 79%;
     height: fit-content;
     overflow: auto;
-    height: 88vh;
+    height: 85vh;
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px) {
+      width: auto;
+      height: auto;
+    }
     .cardlist{
       list-style: none;
       margin:0px;
@@ -118,6 +165,13 @@ main {
       }
     }
   }
+}
+.author{
+  display: none;
+}
+footer{
+  background:#fff;
+  padding: 15px;
 }
 nav {
   padding:15px;

@@ -93,7 +93,6 @@ module.exports = () => {
         name: true,
         cacheGroups: {
           default: false,
-          vendors: false,
           vendors: {
             chunks: 'all',
             test: /[\\/]node_modules[\\/]/,

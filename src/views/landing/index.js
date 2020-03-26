@@ -3,7 +3,8 @@ import { getAllCountries, getEachCountryData, getSingleCountry } from 'Utils/'
 import asyncComponent from 'Hoc/asyncComponents'
 import Navigation from '../navigation'
 import CountryCards from './countrycard'
-import CountriesCards from './countriescards'
+// import CountriesCards from './countriescards'
+import StickyHeadTable from './table'
 
 const AsyncCard = asyncComponent(() => {
   return import('./cards')
@@ -53,7 +54,6 @@ class LandingPageComponent extends Component {
     getSingleCountry(label)
       .then(res => {
         this.setState({ country: res, countriesVisiblity: false })
-        console.log(this.state.country)
       })
       .catch(err => {
         console.error(err)
@@ -65,8 +65,7 @@ class LandingPageComponent extends Component {
   }
 
   render() {
-    const { data, countries, country, countriesVisiblity } = this.state
-
+    const { data, countries, country } = this.state
     return (
       <React.Fragment>
         <Navigation countryName={this.getDataByCountry.bind(this)} />
@@ -74,17 +73,26 @@ class LandingPageComponent extends Component {
           <aside>
             <AsyncCard props={data} />
             <button className='refreshbutton' onClick={this.handleClick}>
-              Reset Search View
+              Reset & Reload Search View
             </button>
           </aside>
           <section>
             {country ? <CountryCards country={country} /> : ''}
-            {countriesVisiblity ? <CountriesCards countries={countries} /> : ''}
+            <StickyHeadTable countries={countries} />
           </section>
         </main>
+        <footer>
+          Data Source :
+          <a href='https://www.worldometers.info/coronavirus/' target='_blank'>
+            https://www.worldometers.info/coronavirus/
+          </a>
+        </footer>
       </React.Fragment>
     )
   }
 }
 
 export default LandingPageComponent
+
+// {country ? <CountryCards country={country} /> : ''}
+// {countriesVisiblity ? <CountriesCards countries={countries} /> : ''}
